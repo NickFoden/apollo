@@ -20,7 +20,7 @@ const client = new ApolloClient({
 });
 
 const ApolloApp = () => (
-  <ApolloProvider>
+  <ApolloProvider client={client}>
     <App />
   </ApolloProvider>
 );
@@ -28,3 +28,5 @@ const ApolloApp = () => (
 Meteor.startup(() => {
   render(<ApolloProvider />, document.getElementById("app"));
 });
+
+//https://www.youtube.com/watch?v=5_xLJnp3kzY&list=PLLnpHn493BHFTDL9M1PKnxQwBwOZ8J-h4&index=7
